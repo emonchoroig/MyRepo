@@ -1,0 +1,75 @@
+
+<confirmation-modal [isOpen]="isModalOpen" (acceptChanges)="onAcceptChanges()" (cancelChanges)="onCancelChanges()"></confirmation-modal>
+
+<h2 class="text-center">Create user</h2>
+<form [formGroup]="registerForm" (ngSubmit)="register()" class="row g-3">
+        <div class="form-group">
+        <label for="appUser">User:</label>
+        <input type="text" id="appUser" formControlName="appUser" class="form-control">
+        <div *ngIf="registerForm.controls.appUser.invalid && (registerForm.controls.appUser.dirty || registerForm.controls.appUser.touched)">
+          <div *ngIf="registerForm.controls.appUser.errors.required">This camp is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="nameUser">Name:</label>
+        <input type="text" id="nameUser" formControlName="nameUser" class="form-control">
+        <div *ngIf="registerForm.controls.nameUser.invalid && (registerForm.controls.nameUser.dirty || registerForm.controls.nameUser.touched)">
+          <div *ngIf="registerForm.controls.nameUser.errors.required">This camp is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="surnameUser">Surname:</label>
+        <input type="text" id="surnameUser" formControlName="surnameUser" class="form-control">
+        <div *ngIf="registerForm.controls.surnameUser.invalid && (registerForm.controls.surnameUser.dirty || registerForm.controls.surnameUser.touched)">
+          <div *ngIf="registerForm.controls.surnameUser.errors.required">This camp is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mailUser">Email:</label>
+        <input type="email" id="mailUser" formControlName="mailUser" class="form-control">
+        <div *ngIf="registerForm.controls.mailUser.invalid && (registerForm.controls.mailUser.dirty || registerForm.controls.mailUser.touched)">
+          <div *ngIf="registerForm.controls.mailUser.errors.required">This camp is required.</div>
+          <div *ngIf="registerForm.controls.mailUser.errors.email">This camp has to be a correct email.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="passwordUser">Password:</label>
+        <input type="password" id="passwordUser" formControlName="passwordUser" class="form-control">
+        <div *ngIf="registerForm.controls.passwordUser.invalid && (registerForm.controls.passwordUser.dirty || registerForm.controls.passwordUser.touched)">
+          <div *ngIf="registerForm.controls.passwordUser.errors.required">This camp is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="photoUser">Photo:</label>
+        <input type="text" id="photoUser" formControlName="photoUser" class="form-control">
+        <div *ngIf="registerForm.controls.photoUser.invalid && (registerForm.controls.photoUser.dirty || registerForm.controls.photoUser.touched)">
+          <div *ngIf="registerForm.controls.photoUser.errors.required">This camp is required.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="birthdateUser">Birthdate:</label>
+        <input type="date" id="birthdateUser" formControlName="birthdateUser" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="genderUser">Gender:</label>
+        <select id="genderUser" formControlName="genderUser" class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="ocupationUser">Ocupation:</label>
+        <input type="string" id="ocupationUser" formControlName="ocupationUser" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="descriptionUser">Description:</label>
+        <input type="string" id="descriptionUser" formControlName="descriptionUser" class="form-control">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="privacyUser" name="privacyUser" formControlName="privacyUser">
+        <label class="form-check-label" for="privacyUser">Privacy</label>
+      </div>
+      
+      <button class="btn btn-primary" (click)="openModal()">Save changes</button>  </form>
+

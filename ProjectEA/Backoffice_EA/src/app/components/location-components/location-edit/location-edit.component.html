@@ -1,0 +1,58 @@
+<confirmation-modal
+  [isOpen]="isModalOpen"
+  (acceptChanges)="onAcceptChanges()"
+  (cancelChanges)="onCancelChanges()"
+></confirmation-modal>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nameLocation">Location name</label>
+    <input
+      type="string"
+      class="form-control"
+      id="nameLocation"
+      name="nameLocation"
+      [(ngModel)]="locData.nameLocation"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="latLocation">Latitude</label>
+    <input
+      type="string"
+      class="form-control"
+      id="latLocation"
+      name="latLocation"
+      [(ngModel)]="locData.latLocation"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="lonLocation">Longitude</label>
+    <input
+      type="string"
+      class="form-control"
+      id="lonLocation"
+      name="lonLocation"
+      [(ngModel)]="locData.lonLocation"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="descriptionLocation">Description</label>
+    <input
+      type="string"
+      class="form-control"
+      id="descriptionLocation"
+      name="descriptionLocation"
+      [(ngModel)]="locData.descriptionLocation"
+      required
+    />
+  </div>
+
+  <button class="btn btn-primary" (click)="editar()">Save changes</button>
+  <button type="button" class="btn btn-primary2" (click)="eliminar()"> Eliminate location </button>
+</form>

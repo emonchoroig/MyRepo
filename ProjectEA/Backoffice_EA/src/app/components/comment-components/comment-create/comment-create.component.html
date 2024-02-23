@@ -1,0 +1,46 @@
+<confirmation-modal
+  [isOpen]="isModalOpen"
+  (acceptChanges)="onAcceptChanges()"
+  (cancelChanges)="onCancelChanges()"
+></confirmation-modal>
+
+
+<h2 class="text-center">Create comment</h2>
+
+<form [formGroup]="commentForm" (ngSubmit)="onSubmit()" class="row g-3">
+  <div class="form-group">
+    <label for="idUserComment">ID User:</label>
+    <input
+      type="string"
+      id="idUserComment"
+      formControlName="idUserComment"
+      class="form-control"
+    />
+      
+  </div>
+
+  <div class="form-group">
+    <label for="idPublicationComment">ID Publication:</label>
+    <input
+      type="string"
+      id="idPublicationComment"
+      formControlName="idPublicationComment"
+      class="form-control"
+    />
+    
+  </div>
+
+  <div class="form-group">
+    <label for="textComment">Text:</label>
+    <input
+      type="string"
+      id="textComment"
+      formControlName="textComment"
+      class="form-control"
+    />
+  </div>
+    
+
+  <button class="btn btn-primary" type="submit">Save changes</button>
+
+

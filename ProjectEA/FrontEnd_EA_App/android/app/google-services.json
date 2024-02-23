@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "784650414999",
+    "project_id": "lplan-9b4a1",
+    "storage_bucket": "lplan-9b4a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784650414999:android:c36b744f7dfc2a3fb072d2",
+        "android_client_info": {
+          "package_name": "com.ea.lplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784650414999-rt9ojtc94j5vs5n8qn2e40lfefog9kjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD70YU1SWk4gwmaDsdOywzd6CsehkHhZ_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784650414999-rt9ojtc94j5vs5n8qn2e40lfefog9kjj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "784650414999-38nqnfu1e6dar0sppfa577jo0o40gglu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ea.lplan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

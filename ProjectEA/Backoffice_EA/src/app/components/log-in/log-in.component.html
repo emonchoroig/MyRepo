@@ -1,0 +1,22 @@
+<h2 class="text-center">Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="row g-3">
+
+      <div class="form-group">
+        <label for="mailUser">Email:</label>
+        <input type="email" id="mailUser" formControlName="mailUser" class="form-control">
+        <div *ngIf="loginForm.controls.mailUser.invalid && (loginForm.controls.mailUser.dirty || loginForm.controls.mailUser.touched)">
+          <div *ngIf="loginForm.controls.mailUser.errors.required">This camp is required.</div>
+          <div *ngIf="loginForm.controls.mailUser.errors.email">This camp has to be a valid email.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="passwordUser">Password:</label>
+        <input type="password" id="passwordUser" formControlName="passwordUser" class="form-control">
+        <div *ngIf="loginForm.controls.passwordUser.invalid && (loginForm.controls.passwordUser.dirty || loginForm.controls.passwordUser.touched)">
+          <div *ngIf="loginForm.controls.passwordUser.errors.required">This camp is required.</div>
+        </div>
+      </div>
+
+  
+    <button class="btn btn-primary">Access</button></form>

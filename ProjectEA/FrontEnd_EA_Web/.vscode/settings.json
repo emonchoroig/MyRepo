@@ -1,0 +1,6 @@
+{
+    "i18next.i18nPaths": "",
+    "files.exclude": {
+        "**/.git": false
+    }
+}

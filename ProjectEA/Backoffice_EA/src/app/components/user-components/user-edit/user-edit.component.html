@@ -1,0 +1,159 @@
+<confirmation-modal
+  [isOpen]="isModalOpen"
+  (acceptChanges)="onAcceptChanges()"
+  (cancelChanges)="onCancelChanges()"
+></confirmation-modal>
+
+<h2 class="text-center">Edit user</h2>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="appUser">Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="appUser"
+      name="appUser"
+      [(ngModel)]="userData.appUser"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="nameUser">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nameUser"
+      name="nameUser"
+      [(ngModel)]="userData.nameUser"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="surnameUser">Surname</label>
+    <input
+      type="text"
+      class="form-control"
+      id="surnameUser"
+      name="surnameUser"
+      [(ngModel)]="userData.surnameUser"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="mailUser">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="mailUser"
+      name="mailUser"
+      [(ngModel)]="userData.mailUser"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="photoUser">Profile photo</label>
+    <input
+      type="text"
+      class="form-control"
+      id="photoUser"
+      name="photoUser"
+      [(ngModel)]="userData.photoUser"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="birthdateUser">Birthdate</label>
+    <input
+      type="date"
+      class="form-control"
+      id="birthdateUser"
+      name="birthdateUser"
+      [(ngModel)]="userData.birthdateUser"
+      required
+    />
+  </div>
+  <div class="last-updated">
+    The last registered birthdate:
+    {{ formatDate(userData.birthdateUser) }}
+  </div>
+  <div class="form-group">
+    <label for="genderUser">Gender</label>
+    <select
+      class="form-control"
+      id="genderUser"
+      name="genderUser"
+      [(ngModel)]="userData.genderUser"
+      required
+    >
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="ocupationUser">Ocupation</label>
+    <input
+      type="text"
+      class="form-control"
+      id="ocupationUser"
+      name="ocupationUser"
+      [(ngModel)]="userData.ocupationUser"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="descriptionUser">Description</label>
+    <textarea
+      class="form-control"
+      id="descriptionUser"
+      name="descriptionUser"
+      [(ngModel)]="userData.descriptionUser"
+      rows="3"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="privacyUser"
+      name="privacyUser"
+      [(ngModel)]="userData.privacyUser"
+    />
+    <label class="form-check-label" for="privacyUser">Privacy</label>
+  </div>
+  <div class="form-group">
+    <label for="roleUser">Role</label>
+    <select
+      class="form-control"
+      id="roleUser"
+      name="roleUser"
+      [(ngModel)]="userData.roleUser"
+      required
+    >
+      <option value="user">User</option>
+      <option value="business">Business</option>
+      <option value="admin">Administrator</option>
+    </select>
+  </div>
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="deletedUser"
+      name="deletedUser"
+      [(ngModel)]="userData.deletedUser"
+    />
+    <label class="form-check-label" for="deletedUser">Eliminated</label>
+  </div>
+
+  <button class="btn btn-primary" (click)="openModal()"><p class="text-center">Save changes</p></button>
+</form>

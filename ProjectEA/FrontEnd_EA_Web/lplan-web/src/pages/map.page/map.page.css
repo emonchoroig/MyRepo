@@ -1,0 +1,115 @@
+.big_container {
+    margin: 0px !important;
+}
+.map-page-container {
+    position: relative;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .search-container input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 50%;
+  }
+  
+  .search-container button {
+    font-size: 14px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10%;
+  }
+  
+  .search-container button:hover {
+    background-color: #66fcf1;
+    color: black;
+  }
+  
+  .search-results {
+    position: absolute;
+    z-index: 1000;
+    width: 766px;
+    left: 43%;
+    top: 56px;
+    transform: translateX(-50%);
+    background-color: white;
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+  }
+
+  .input_location_style{
+    height: 12px;
+    font-size: 14px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+  
+  .search-results li {
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .search-results li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Estilos para el mapa */
+  .leaflet-container {
+    height: 800px;
+    width: 100%;
+  }
+  
+  /* Estilos para los marcadores */
+  .leaflet-marker-icon,
+  .leaflet-marker-shadow {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .leaflet-tooltip {
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaflet-popup-content {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .leaflet-popup-tip-container {
+    display: none;
+  }
+  
+  /* Estilos para el footer */
+  .footer {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer a {
+    color: #007bff;
+  }
+
+  

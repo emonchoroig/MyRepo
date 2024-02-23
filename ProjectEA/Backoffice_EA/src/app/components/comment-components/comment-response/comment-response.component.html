@@ -1,0 +1,40 @@
+
+<div class="d-flex justify-content-center mb-4">
+  <button class="btn" type="button" (click)="printeaTodos()"><p class="animated-word">ALL</p></button>
+</div>
+<div class="input-group mb-3">
+  <!-- Queremos que busque insultos dentro de los comentarios. En el searchTerm-->
+  <input
+    type="string"
+    class="form-control rounded-pill"
+    placeholder="Search by word"    
+    [(ngModel)]="searchTerm"
+    name="searchTerm"
+    (keyup)="search()"
+  />
+</div>
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="text-center">IDUsuario</th>
+        <th class="text-center">texto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let comment of filteredComments"
+      >
+        <td class="text-center">{{ comment.idUserComment }}</td>
+        <td class="text-center">{{ comment.textComment }}</td>
+        <td><a [routerLink]="['/comment-details', comment.uuid]"><button type="button" class="button-arounder" (click)="showDetails(comment.uuid)">DETAILS</button></a></td>
+        <td><a [routerLink]="['/comment-edit', comment.uuid]"><button type="button" class="button-arounder" (click)="showEdit(comment.uuid)">EDIT</button></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <button type="button" class="button-arounder" (click)="paginateprevious()" >Previous</button>
+  <p class="textoPag"> {{ numPage }} </p> 
+  <button type="button" class="button-arounder" (click)="paginatenext()">Next</button>  
+</div>

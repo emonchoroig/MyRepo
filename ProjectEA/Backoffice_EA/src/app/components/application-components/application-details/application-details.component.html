@@ -1,0 +1,31 @@
+<div class="container">
+    <h1 class="text-center">Application details</h1>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="card my-5">
+          <div class="card-header">
+            <h2 *ngIf="applicationId" class="text-center">{{applicationId}}</h2>
+          </div>
+          <div class="card-body">
+            <div *ngIf="applicationData">
+              <ul class="list-group">
+                <li class="list-group-item"><strong>ID:</strong> {{ applicationData.uuid }}</li>
+                <li class="list-group-item"><strong>Creator ID:</strong> {{ applicationData.idSender }}</li>
+                <li class="list-group-item"><strong>Receiver ID:</strong> {{ applicationData.idReceiver }}</li>
+                <li class="list-group-item"><strong>Type:</strong> {{ applicationData.typeApplication }}</li>
+                <li class="list-group-item"><strong>Activity ID:</strong> {{ applicationData.idActivity }}</li>
+                <li class="list-group-item"><strong>Application description:</strong> {{ applicationData.descriptionApplication}}</li>
+                <li class="list-group-item"><strong>Created at:</strong> {{ applicationData.createdAt }}</li>
+                <li class="list-group-item"><strong>UpdatedAt:</strong> {{ applicationData.updatedAt }}</li>
+              </ul>
+            </div>
+  
+            <div *ngIf="!applicationData" class="text-center mt-5">
+              <p>Loading data...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
